@@ -120,16 +120,9 @@ def spec_to_p(dic):
 
 
 def main(path):  # the func we imported
-     
     biag,words = get_words_bia(path, True) # get words and their biagrans
-    #biag,words = get_words_bia("e.txt", True, "ru")
-    #text = nltk.corpus.gutenberg.words('warlordofmars.txt')
-    #text = nltk.corpus.gutenberg.words('austen-emma.txt')
-    #biag,words = get_words_bia(text)
     f = frequency(biag,words) # get freq (cond probabilities)
-    #spec_to_p(f)
     result_test,c = generate_text(f, words) # and generate the result
-    #print(c)
     return result_test
 
     
